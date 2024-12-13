@@ -1,0 +1,56 @@
+/* General styling for header */
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 96.5%;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .logo {
+    height: 40px; /* Adjust height as needed */
+    width: auto;  /* Maintain aspect ratio */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #8a1538;
+  }
+  
+  /* Add padding to avoid overlapping */
+  .content {
+    padding-top: 60px; /* Matches header height */
+  }
+  
