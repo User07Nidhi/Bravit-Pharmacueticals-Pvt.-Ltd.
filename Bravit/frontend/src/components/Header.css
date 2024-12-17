@@ -1,56 +1,74 @@
-/* General styling for header */
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
 header {
-    background-color: #ffffff;
-    padding: 10px 20px;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 96.5%;
-    z-index: 1;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Navbar container */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Logo styling */
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Navigation links */
-  .nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 0; /* Top and bottom padding */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures header stays above content */
+  width: 100%;
+}
+
+/* Navigation Container */
+.nav-container {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between logo and links */
+  padding: 0 20px; /* Horizontal padding for the container */
+}
+
+/* Logo Styling */
+.logo img {
+  height: 50px; /* Adjust logo size */
+  display: block;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between navigation items */
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px; /* Add padding for clickable area */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+}
+
+/* Ensure Navigation Aligns Left and Doesn't Center */
+.nav-links {
+  margin: 0; /* Removes any default margin */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start; /* Stack items vertically */
   }
 
-  .logo {
-    height: 40px; /* Adjust height as needed */
-    width: auto;  /* Maintain aspect ratio */
+  .nav-links {
+    flex-direction: column; /* Stacks links vertically */
+    gap: 10px;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #8a1538;
-  }
-  
-  /* Add padding to avoid overlapping */
-  .content {
-    padding-top: 60px; /* Matches header height */
-  }
-  
+}
